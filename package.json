@@ -1,0 +1,25 @@
+{
+  "name": "medimatch-monorepo",
+  "version": "1.0.0",
+  "private": true,
+  "workspaces": [
+    "packages/*",
+    "apps/*"
+  ],
+  "scripts": {
+    "build": "npm run build --workspace=packages/shared && npm run build --workspace=apps/server && npm run build --workspace=apps/client",
+    "start": "npm run start --workspace=apps/server",
+    "dev:server": "npm run dev --workspace=apps/server",
+    "dev:client": "npm run dev --workspace=apps/client",
+    "seed": "npm run seed --workspace=apps/server"
+  },
+  "keywords": [
+    "medimatch",
+    "surgical-counseling",
+    "ai-prediction",
+    "healthcare"
+  ],
+  "author": "",
+  "license": "ISC"
+}
+
